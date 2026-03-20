@@ -1,0 +1,15 @@
+{
+  "name": "Loki Max",
+  "short_name": "Loki Max",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08110d",
+  "theme_color": "#08110d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

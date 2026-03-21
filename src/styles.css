@@ -1,1 +1,79 @@
 
+:root{
+  --bg:#050806;
+  --panel:#0c120e;
+  --line:rgba(123,245,106,.13);
+  --text:#eef5ef;
+  --muted:#96a695;
+  --green:#84f56a;
+  --mint:#45ffd0;
+  --gold:#d7c572;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:Inter,system-ui,Arial,sans-serif;
+  background:radial-gradient(circle at top, rgba(69,255,208,.08), transparent 22%),linear-gradient(180deg,#050806 0%,#090e0b 100%);
+  color:var(--text);
+}
+button{font:inherit}
+.shell{max-width:680px;margin:0 auto;min-height:100vh;padding:14px 14px 98px}
+.header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.brand{font-size:1.7rem;font-weight:900;letter-spacing:.02em;color:var(--green)}
+.sub{margin-top:3px;font-size:.78rem;color:var(--muted)}
+.chip{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:999px;padding:9px 12px;font-size:.86rem;font-weight:800}
+.stats-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:14px}
+.stat-box{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));border:1px solid var(--line);border-radius:18px;padding:11px 10px}
+.stat-box span{display:block;color:var(--muted);font-size:.73rem}
+.stat-box strong{display:block;margin-top:7px;font-size:1rem}
+.sports{display:flex;gap:8px;overflow:auto;padding:0 0 12px;scrollbar-width:none}
+.sports::-webkit-scrollbar{display:none}
+.sport-btn{border:none;border-radius:14px;padding:10px 12px;background:rgba(255,255,255,.04);color:#cad4cb}
+.sport-btn.active{background:rgba(132,245,106,.15);color:var(--green)}
+.main,.stack{display:grid;gap:12px}
+.panel,.game-card{background:linear-gradient(180deg, rgba(15,22,18,.96), rgba(9,13,10,.98));border:1px solid var(--line);border-radius:22px;padding:14px}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.panel-head h3{margin:0;font-size:1.08rem}
+.hint{color:var(--muted);font-size:.83rem;line-height:1.45}
+.game-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+.league{font-size:.74rem;color:var(--mint);font-weight:800;letter-spacing:.08em}
+.start{margin-top:4px;color:var(--muted);font-size:.8rem}
+.status{white-space:nowrap;border-radius:999px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);color:#c9d2ca;padding:8px 10px;font-size:.78rem}
+.title-row{width:100%;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:12px;border:none;background:transparent;color:var(--text);padding:0;margin-bottom:10px}
+.teams{font-size:1.18rem;font-weight:900;line-height:1.05}
+.teams span{color:var(--green)}
+.records{margin-top:4px;color:var(--muted);font-size:.8rem}
+.chev{width:34px;height:34px;display:grid;place-items:center;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.05);font-size:1.2rem}
+.market-label{margin:10px 0 8px;font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.tile-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{border:none;text-align:left;padding:13px 12px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.05);color:var(--text)}
+.tile span{display:block;font-size:.89rem}
+.tile strong{display:block;margin-top:6px;color:var(--green);font-size:1rem}
+.tile.alt strong{color:var(--gold)}
+.tile.selected{box-shadow:0 0 0 1px rgba(132,245,106,.24) inset;background:linear-gradient(180deg, rgba(64,102,57,.45), rgba(255,255,255,.02))}
+.pick-row,.leader-row,.profile-card,.sheet-pick{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-top:1px solid rgba(255,255,255,.05)}
+.pick-row:first-of-type,.leader-row:first-of-type,.sheet-pick:first-of-type{border-top:none}
+.pick-title{font-size:.96rem;font-weight:800}
+.pick-sub{margin-top:2px;color:var(--muted);font-size:.8rem}
+.icon-btn{width:30px;height:30px;border:none;border-radius:10px;background:rgba(255,255,255,.05);color:#dbe3db}
+.leader-score{font-weight:800;color:var(--green)}
+.profile-avatar{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--green);font-weight:900}
+.fab{position:fixed;right:18px;bottom:86px;z-index:5;border:none;border-radius:999px;padding:14px 16px;background:linear-gradient(180deg, #8ef86f, #6ce14b);color:#091009;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.nav{position:fixed;left:0;right:0;bottom:0;max-width:680px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:10px 14px 16px;background:linear-gradient(180deg, rgba(5,8,6,.12), rgba(5,8,6,.95) 20%);backdrop-filter:blur(8px)}
+.nav-btn{border:none;border-radius:16px;padding:12px 6px;background:rgba(255,255,255,.05);color:#c9d3ca;font-size:.82rem}
+.nav-btn.active{color:var(--green);background:rgba(132,245,106,.16)}
+.ghost{border:none;background:rgba(255,255,255,.05);color:#d8e0d7;border-radius:12px;padding:9px 11px}
+.ghost.small{padding:8px 10px;font-size:.8rem}
+.sheet-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.46)}
+.sheet{position:fixed;left:0;right:0;bottom:0;max-width:680px;margin:0 auto;background:linear-gradient(180deg, rgba(16,24,19,.98), rgba(9,13,11,.99));border:1px solid var(--line);border-bottom:none;border-radius:24px 24px 0 0;padding:10px 14px 20px;z-index:10}
+.grab{width:54px;height:5px;border-radius:999px;background:rgba(255,255,255,.15);margin:4px auto 14px}
+.sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.sheet-title{font-size:1.08rem;font-weight:900}
+.sheet-list,.sheet-block{margin-top:12px}
+.sheet-copy{color:#d8e2d9;font-size:.9rem;line-height:1.45}
+.submit{width:100%;margin-top:14px;border:none;border-radius:16px;padding:15px;background:linear-gradient(180deg, #8ef86f, #6ce14b);color:#0a120a;font-weight:900;font-size:1rem}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:154px;z-index:12;border-radius:14px;background:rgba(132,245,106,.14);border:1px solid rgba(132,245,106,.24);color:#dff8da;padding:10px 14px;font-size:.9rem}
+@media (max-width:520px){
+  .shell{padding:12px 12px 96px}
+  .stats-strip{grid-template-columns:repeat(2,1fr)}
+}
